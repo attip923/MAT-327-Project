@@ -1,0 +1,8 @@
+mean(EEG_data$Attention)
+median(EEG_data$Attention)
+var(EEG_data$Attention)
+sd(EEG_data$Attention)
+mean(EEG_data$Mediation)
+median(EEG_data$Mediation)
+var(EEG_data$Mediation)
+sd(EEG_data$Mediation)
