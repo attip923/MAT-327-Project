@@ -1,0 +1,13 @@
+View(student1)
+n <- 144
+a = qnorm(.025, mean = attention_mean, sd = attention_sd)
+attention_mean = mean(student1$Attention)
+attention_sd = sd(student1$Attention)
+a = qnorm(.025, mean = attention_mean, sd = attention_sd)
+attention_mean - a*attention_sd/sqrt(n)
+attention_mean + a*attention_sd/sqrt(n)
+mediation_mean = mean(student1$Mediation)
+mediation_sd = sd(student1$Mediation)
+m = qnorm(.025, mean = mediation_mean, sd = mediation_sd)
+mediation_mean - m*mediation_sd/sqrt(n)
+mediation_mean + m*mediation_sd/sqrt(n)
