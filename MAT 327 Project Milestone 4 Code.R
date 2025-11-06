@@ -1,0 +1,7 @@
+library(dplyr)
+demographic_info <- rename("SubjectID" = "subject ID")
+total_eeg <- merge(EEG_data, demographic_info, by = c("SubjectID"))
+View(total_eeg)
+student <- subset(total_eeg, SubjectID == 0)
+student1 <- subset(student, VideoID == 0, select = c("SubjectID", "VideoID", "Attention", "Mediation", "Raw", "predefinedlabel", "user-definedlabeln", "age", "ethnicity", "gender"))
+View(student1)
