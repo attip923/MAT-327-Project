@@ -1,0 +1,5 @@
+View(student1)
+eeg.lm <- lm(Attention ~ Mediation, data = student1)
+summary(eeg.lm)
+hist(resid(eeg.lm))
+plot(fitted.values(eeg.lm),resid(eeg.lm))
