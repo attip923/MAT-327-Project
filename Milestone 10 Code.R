@@ -1,0 +1,8 @@
+View(total_eeg)
+studentm <- subset(total_eeg, SubjectID == 0)
+student0 <- subset(studentm, select = c("SubjectID", "VideoID", "Attention", "Mediation", "Raw", "predefinedlabel", "user-definedlabeln", "age", "ethnicity", "gender"))
+View(student0)
+eeg.lm2 <- lm(Attention ~ Mediation, data = student0)
+summary(eeg.lm2)
+hist(resid(eeg.lm2))
+plot(fitted.values(eeg.lm2),resid(eeg.lm2))
